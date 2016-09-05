@@ -1,0 +1,37 @@
+<!DOCTYPE html5>
+<html>
+<head>
+<title>Angular Assignment2</title>
+<meta charset = "utf-8">
+<meta http-equiv="X-UA-Compatible" content = "IE=edge">
+<meta name = "viewport" content="width=device-width initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel = "stylesheet" href = "stylesheets/stylesheet.css">
+</head>
+<body ng-app = "myApp" ng-controller="myCtrl">
+
+<div class = "container-fluid">
+<div class = "container">
+  <h2 style="text-align:center">Find Information</h2>
+<div class = "row">
+ <div class = "page-header">
+  <input type = "text" ng-model = "search" placeholder = "search name here"> 
+ </div>
+ </div>
+<div class = "row">
+   <div id = "border" class="col-md-3" ng-repeat = "x in data1 | filter:{'name' : search}" 
+   ng-show="search" ng-class ="(x.gender=='M')?'red':'blue'">
+    <h4>{{x.name}}</h4>
+    <p>City : {{x.city}}</p>
+    <p>Gender : {{x.gender}}</p>
+    <p>E-mail : {{x.email}}</p> 
+  </div>
+  </div>
+ </div> 
+</div>
+<script src = "scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+.red{
+	border:1px solid red;
+}
+.blue{
+	border:1px solid blue;
+}
+#border{
+	margin:5px;
+	width: 282px;
+	
+}
